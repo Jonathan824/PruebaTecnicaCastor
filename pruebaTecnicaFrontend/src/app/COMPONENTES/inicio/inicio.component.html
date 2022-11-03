@@ -4,6 +4,7 @@
     <thead>
       <tr>
         <th scope="col">id</th>
+        <th scope="col">cedula</th>
         <th scope="col">nombre</th>
         <th scope="col">fecha</th>
         <th scope="col">cargo</th>
@@ -13,14 +14,16 @@
     <tbody>
       <tr *ngFor="let empleado of lista">
         <td>{{empleado.id}}</td>
+        <td>{{empleado.cedula}}</td>
         <td>{{empleado.nombre}}</td>
         <td>{{empleado.fecha}}</td>
         <td>{{empleado.cargo}}</td>
         <td>
           <button class="btn btn-danger">eliminar</button>
-          <button class="btn btn-warning" [routerLink]="['/editar']" routerLinkActive="router-link">modificar</button>
+          <button class="btn btn-warning" [routerLink]="['/editar',empleado.id]" routerLinkActive="router-link">modificar</button>
         </td>
       </tr>
+      
     </tbody>
   </table>
 </div>
