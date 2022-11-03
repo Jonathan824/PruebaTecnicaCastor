@@ -5,36 +5,43 @@
 *	Para quién      :	Castor                                        *
 *	Descripción	:	Implementar el servicio                       *
 ******************************************************************************* 
-*/
+ */
 package com.pruebaTecnicaCastor.Service;
 
 import com.pruebaTecnicaCastor.Dao.TareaDao;
 import com.pruebaTecnicaCastor.model.Tarea;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class TareaServiceImplement implements TareaService {
+
     @Autowired
     private TareaDao tareaDao;
     
-     public List<Tarea> findAll(){
+    @Override
+    @Transactional(readOnly=true)
+    public List<Tarea> finAll() {
         return (List<Tarea>) tareaDao.findAll();
-    }
-     
-    public Tarea Save(Tarea tarea){
-        return tareaDao.save(tarea);
-    }
-    
-    public Tarea findById(Integer id){
-        return tareaDao.findById(id).orElse(null);
-    }
-    
-    public void delete(Integer id){
-        tareaDao.deleteById(id);
     }
 
     @Override
-    public List<Tarea> finAll() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Transactional(readOnly=false)
+    public Tarea Save(Tarea tarea) {
+        return tareaDao.save(tarea);
+    }
+
+    @Override
+    @Transactional(readOnly=true)
+    public Tarea findById(Integer id) {
+        return tareaDao.findById(id).orElse(null);
+    }
+
+    @Override
+    @Transactional(readOnly=false)
+    public void delete(Integer id) {
+        tareaDao.deleteById(id);
     }
 }
