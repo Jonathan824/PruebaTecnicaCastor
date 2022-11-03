@@ -8,6 +8,7 @@ import { EmpleadoService } from 'src/app/SERVICE/empleado.service';
 })
 export class InicioComponent implements OnInit {
 
+  lista:any=[];
   constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit(): void {
@@ -17,7 +18,9 @@ export class InicioComponent implements OnInit {
   listarEmpleados()
   {
     this.empleadoService.getEmpleados().subscribe(
-      res=>{console.log(res);},
+      res=>{this.lista=res;
+            console.log(res);
+          },
       err=>console.log(err)
     );
   }

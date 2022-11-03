@@ -1,1 +1,18 @@
-<p>Funciona hp</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nombre</th>
+        <th scope="col">fecha</th>
+        <th scope="col">cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of lista">
+        <td>{{empleado.id}}</td>
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.fecha}}</td>
+        <td>{{empleado.cargo}}</td>
+      </tr>
+    </tbody>
+  </table>
