@@ -6,6 +6,9 @@ import { InicioComponent } from './COMPONENTES/inicio/inicio.component';
 import { EditarComponent } from './COMPONENTES/editar/editar.component';
 import { AgregarComponent } from './COMPONENTES/agregar/agregar.component';
 import { NavbarComponent } from './COMPONENTES/navbar/navbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { NavbarComponent } from './COMPONENTES/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
