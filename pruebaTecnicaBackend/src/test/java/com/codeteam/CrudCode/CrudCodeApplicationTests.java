@@ -1,10 +1,10 @@
-package com.pruebaTecnicaCastor.pruebaTecnica;
+package com.codeteam.CrudCode;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PruebaTecnicaApplicationTests {
+class CrudCodeApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,12 +1,12 @@
 /*
-*******************************************************************************
-*	Quién realiza	:	Jonathan Murillo Jaramillo                    *
-*	Cuando realiza	:	26/10/2022				      *
-*	Para quién      :	Castor                                        *
-*	Descripción	:	Se crea entidad de la tabla tarea             *
-******************************************************************************* 
+*********************************************************************************************************
+*	Quién realiza	:	Jonathan Murillo Jaramillo						*
+*	Cuando realiza	:	26/10/2022								*						*
+*	Para quién	:	Castor									*						*
+*	Descripción	:	Se crea clase Empleado para el manejo de los campos de la tabla         *
+*********************************************************************************************************
 */
-package com.pruebaTecnicaCastor.model;
+package com.codeteam.CrudCode.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="empleados")
-public class Tarea {
+public class Empleado {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
@@ -26,11 +26,11 @@ public class Tarea {
     @Column(name="nombre")
     private String nombre;
     
-    @Column(name="rutaFoto")
-    private String rutaFoto;
+    @Column(name="ruta")
+    private String ruta;
     
-    @Column(name="fechaIngreso")
-    private String fechaIngreso;
+    @Column(name="fecha")
+    private String fecha;
     
     @Column(name="cargo")
     private Integer cargo;
@@ -51,20 +51,20 @@ public class Tarea {
         this.nombre = nombre;
     }
 
-    public String getRutaFoto() {
-        return rutaFoto;
+    public String getRuta() {
+        return ruta;
     }
 
-    public void setRutaFoto(String rutaFoto) {
-        this.rutaFoto = rutaFoto;
+    public void setRuta(String rutaFoto) {
+        this.ruta = rutaFoto;
     }
 
-    public String getFechaIngreso() {
-        return fechaIngreso;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFechaIngreso(String fechaIngreso) {
-        this.fechaIngreso = fechaIngreso;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public Integer getCargo() {
