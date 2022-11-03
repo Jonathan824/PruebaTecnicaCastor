@@ -19,7 +19,7 @@
         <td>{{empleado.fecha}}</td>
         <td>{{empleado.cargo}}</td>
         <td>
-          <button class="btn btn-danger">eliminar</button>
+          <button class="btn btn-danger" (click)="eliminar(empleado.id)">eliminar</button>
           <button class="btn btn-warning" [routerLink]="['/editar',empleado.id]" routerLinkActive="router-link">modificar</button>
         </td>
       </tr>
