@@ -1,0 +1,18 @@
+<div class="container">
+    <form action="">
+        <label for="cedula">Cedula</label>
+        <input type="text" id="cedula" name="cedula" [(ngModel)]="empleadoNuevo.cedula">
+        
+        <label for="Nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="empleadoNuevo.nombre">
+        
+        <label for="fecha">Fecha</label>
+        <input type="text" id="fecha" name="fecha" [(ngModel)]="empleadoNuevo.fecha">
+        
+        <label for="cargo">Cargo</label>
+        <input type="text" id="cargo" name="cargo" [(ngModel)]="empleadoNuevo.cargo">
+        <br>
+        <button class="btn btn-primary" (click)="agregarEmpleado()">Guardar</button>
+        
+    </form>
+</div>

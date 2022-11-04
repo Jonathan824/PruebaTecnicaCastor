@@ -16,13 +16,13 @@ CREATE TABLE IF NOT EXISTS empleados
 	id INT AUTO_INCREMENT PRIMARY KEY,
     cedula		 int,
     nombre 	 	 varchar(60),
-    rutaFoto 	 varchar(200),
-    fechaIngreso date,
+    ruta     	 varchar(200),
+    fecha		 varchar(100),
     cargo	 	 int
 );
 
 -- Datos de ejemplo...
-INSERT IGNORE INTO empleados(cedula, nombre, rutaFoto, fechaIngreso, cargo) 
-VALUES('1001577726','Jonathan Murillo Jaramillo', 'N/A','2022-10-26',1);
+INSERT IGNORE INTO empleados(cedula, nombre, ruta, fecha, cargo) 
+VALUES('1001577726','Jonathan Murillo Jaramillo', 'noaplica','20221026',1);
 
 
