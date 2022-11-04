@@ -23,6 +23,9 @@ public class Empleado {
     @Column(name="id")
     private Integer id;
     
+    @Column(name="cedula")
+    private String cedula;
+    
     @Column(name="nombre")
     private String nombre;
     
@@ -73,5 +76,13 @@ public class Empleado {
 
     public void setCargo(Integer cargo) {
         this.cargo = cargo;
+    }
+    
+     public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 }
