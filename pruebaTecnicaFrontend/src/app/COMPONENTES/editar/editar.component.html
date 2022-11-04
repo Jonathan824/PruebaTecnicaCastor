@@ -1,1 +1,15 @@
-<p>editar works!</p>
+<div class="container">
+    <label for="cedula">Cedula</label>
+    <input type="text" id="cedula" name="cedula" [(ngModel)]="empleadoActual.cedula">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="empleadoActual.nombre">
+
+    <label for="fecha">Fecha</label>
+    <input type="text" id="fecha" name="fecha" [(ngModel)]="empleadoActual.fecha">
+
+    <label for="cargo">Cargo</label>
+    <input type="text" id="cargo" name="cargo" [(ngModel)]="empleadoActual.cargo">
+
+    <button class="btn btn-primary" (click)="guardar()">Guardar</button>
+</div>
