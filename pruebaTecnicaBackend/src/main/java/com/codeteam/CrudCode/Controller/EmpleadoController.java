@@ -54,6 +54,7 @@ public class EmpleadoController {
     @PutMapping("/empleados/{id}")
     public Empleado modificar(@RequestBody Empleado empleado, @PathVariable Integer id) {
         Empleado empleadoActual = empleadoService.findById(id);
+        empleadoActual.setCedula(empleado.getCedula());
         empleadoActual.setNombre(empleado.getNombre());
         empleadoActual.setRuta(empleado.getRuta());
         empleadoActual.setFecha(empleado.getFecha());

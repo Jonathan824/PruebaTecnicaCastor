@@ -21,8 +21,20 @@ CREATE TABLE IF NOT EXISTS empleados
     cargo	 	 int
 );
 
+CREATE TABLE IF NOT EXISTS cargos
+(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    cargo 	 	 varchar(50)
+);
+
 -- Datos de ejemplo...
 INSERT IGNORE INTO empleados(cedula, nombre, ruta, fecha, cargo) 
 VALUES('1001577726','Jonathan Murillo Jaramillo', 'noaplica','20221026',1);
+
+INSERT IGNORE INTO cargos(cargo) 
+VALUES('Desarrollador/a'),
+	  ('Gerente'		),
+      ('Analista calidad'),
+      ('Asesor de usuario');
 
 
